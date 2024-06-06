@@ -1,23 +1,21 @@
-# Entwicklungen von mobilen Applikationen: Aktoren und Sensoren
+# Entwicklungen von mobilen Applikationen: Aktoren und Sensoren <!-- omit in toc -->
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis <!-- omit in toc -->
 
-- [Entwicklungen von mobilen Applikationen: Aktoren und Sensoren](#entwicklungen-von-mobilen-applikationen-aktoren-und-sensoren)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Einführung](#einführung)
-  - [Verfügbare Aktoren und Sensoren auf mobilen Geräten](#verfügbare-aktoren-und-sensoren-auf-mobilen-geräten)
-    - [Sensoren](#sensoren)
-    - [Aktoren](#aktoren)
-  - [Austausch von Informationen zwischen Aktoren und Sensoren](#austausch-von-informationen-zwischen-aktoren-und-sensoren)
-    - [Sensoren-Daten lesen](#sensoren-daten-lesen)
-    - [Aktoren-Daten senden](#aktoren-daten-senden)
-  - [Codebeispiele in C# .NET MAUI](#codebeispiele-in-c-net-maui)
-    - [Beispiel: Beschleunigungssensor auslesen](#beispiel-beschleunigungssensor-auslesen)
-    - [Beispiel: Vibration auslösen](#beispiel-vibration-auslösen)
-  - [Vor- und Nachteile der Anwendung und Implementierung](#vor--und-nachteile-der-anwendung-und-implementierung)
-    - [Vorteile](#vorteile)
-    - [Nachteile](#nachteile)
-  - [Fazit](#fazit)
+- [Einführung](#einführung)
+- [Verfügbare Aktoren und Sensoren auf mobilen Geräten](#verfügbare-aktoren-und-sensoren-auf-mobilen-geräten)
+  - [Sensoren](#sensoren)
+  - [Aktoren](#aktoren)
+- [Austausch von Informationen zwischen Aktoren und Sensoren](#austausch-von-informationen-zwischen-aktoren-und-sensoren)
+  - [Sensoren-Daten lesen](#sensoren-daten-lesen)
+  - [Aktoren-Daten senden](#aktoren-daten-senden)
+- [Codebeispiele in C# .NET MAUI](#codebeispiele-in-c-net-maui)
+  - [Beispiel: Beschleunigungssensor auslesen](#beispiel-beschleunigungssensor-auslesen)
+  - [Beispiel: Vibration auslösen](#beispiel-vibration-auslösen)
+- [Vor- und Nachteile der Anwendung und Implementierung](#vor--und-nachteile-der-anwendung-und-implementierung)
+  - [Vorteile](#vorteile)
+  - [Nachteile](#nachteile)
+- [Fazit](#fazit)
 
 ## Einführung
 
@@ -30,20 +28,32 @@ In der modernen mobilen Applikationsentwicklung spielen Aktoren und Sensoren ein
 Sensoren sind Geräte, die physikalische oder umweltbedingte Parameter messen und in elektrische Signale umwandeln. Zu den häufigsten Sensoren auf mobilen Geräten gehören:
 
 - **Beschleunigungssensor (Accelerometer)**: Misst die Beschleunigungskräfte, die auf das Gerät wirken.
-- **Gyroskop**: Misst die Drehgeschwindigkeit und Orientierung des Geräts.
-- **Magnetometer**: Misst das Magnetfeld und dient oft als Kompass.
-- **Lichtsensor**: Misst die Umgebungshelligkeit.
-- **Nähe-Sensor**: Erkennt die Anwesenheit von Objekten in der Nähe des Geräts.
-- **GPS**: Erfasst die geografische Position des Geräts.
-- **Barometer**: Misst den Luftdruck.
+  - _Beispiel_: Fitness-Apps verwenden den Beschleunigungssensor, um Schritte zu zählen.
+- **Gyroskop (Gyroscope)**: Misst die Drehgeschwindigkeit und Orientierung des Geräts.
+  - _Beispiel_: VR- und AR-Apps nutzen das Gyroskop, um die Blickrichtung des Nutzers zu erfassen.
+- **Magnetometer (Magnetometer)**: Misst das Magnetfeld und dient oft als Kompass.
+  - _Beispiel_: Navigations-Apps verwenden das Magnetometer, um die Richtung anzuzeigen.
+- **Lichtsensor (Light Sensor)**: Misst die Umgebungshelligkeit.
+  - _Beispiel_: Automatische Anpassung der Bildschirmhelligkeit basierend auf den Umgebungslichtverhältnissen.
+- **Nähe-Sensor (Proximity Sensor)**: Erkennt die Anwesenheit von Objekten in der Nähe des Geräts.
+  - _Beispiel_: Deaktivierung des Bildschirms während eines Anrufs, wenn das Telefon ans Ohr gehalten wird.
+- **NFC-Sensor (Near Field Communication Sensor)**: Ermöglicht die drahtlose Kommunikation über kurze Distanzen.
+  - _Beispiel_: Kontaktlose Zahlungen und Datenaustausch zwischen Geräten.
+- **GPS (GPS)**: Erfasst die geografische Position des Geräts.
+  - _Beispiel_: Standortbasierte Dienste wie Karten- und Navigations-Apps.
+- **Barometer (Barometer)**: Misst den Luftdruck.
+  - _Beispiel_: Wetter-Apps nutzen das Barometer, um Höhenänderungen und Wettervorhersagen zu verbessern.
 
 ### Aktoren
 
 Aktoren sind Geräte, die elektrische Signale in physikalische Bewegungen oder Aktionen umwandeln. Auf mobilen Geräten sind die gängigsten Aktoren:
 
-- **Vibrationsmotor**: Erzeugt Vibrationen zur Benachrichtigung oder als haptisches Feedback.
-- **Lautsprecher**: Gibt Audiosignale aus.
-- **Bildschirm**: Zeigt visuelle Informationen an und reagiert auf Berührungen.
+- **Vibrationsmotor (Vibration Motor)**: Erzeugt Vibrationen zur Benachrichtigung oder als haptisches Feedback.
+  - _Beispiel_: Haptisches Feedback bei eingehenden Anrufen oder Benachrichtigungen.
+- **Lautsprecher (Speaker)**: Gibt Audiosignale aus.
+  - _Beispiel_: Wiedergabe von Musik, Anrufen und Benachrichtigungstönen.
+- **Bildschirm (Screen)**: Zeigt visuelle Informationen an und reagiert auf Berührungen.
+  - _Beispiel_: Anzeige von Benutzeroberflächen, Videos und interaktiven Inhalten.
 
 ## Austausch von Informationen zwischen Aktoren und Sensoren
 
